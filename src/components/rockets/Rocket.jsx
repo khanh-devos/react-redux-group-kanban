@@ -1,3 +1,3 @@
 export default function Rockets() {
-  return (<div>Rocket</div>);
+  return (<div className="rocket">Rocket</div>);
 }
