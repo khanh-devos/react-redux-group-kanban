@@ -1,23 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import {
+  BrowserRouter, Route, NavLink, Routes,
+} from 'react-router-dom';
+import Missions from './components/missions/Mission';
+import Rockets from './components/rockets/Rocket';
 
 function App() {
+  const colorActiveRoute = ({ isActive }) => (isActive ? { textDecoration: 'underline' } : { textDecoration: 'none' });
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BrowserRouter>
+        <NavLink style={colorActiveRoute} to="/">Rockets</NavLink>
+        <NavLink style={colorActiveRoute} to="/mission">Missions</NavLink>
+
+        <Routes>
+          <Route path="/" Component={Rockets} />
+          <Route path="/mission" Component={Missions} />
+
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

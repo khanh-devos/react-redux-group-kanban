@@ -1,0 +1,13 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+
+* {
+  box-sizing: border-box;
+  font-family: Roboto, fantasy;
+  font-size: 14px;
+  padding: 0;
+  margin: 0.2rem;
+}
+
+body {
+  text-align: center;
+}
