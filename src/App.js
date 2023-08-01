@@ -4,13 +4,22 @@ import './components/rockets/rocket.css';
 import {
   BrowserRouter, Route, NavLink, Routes,
 } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { useEffect } from 'react';
 import Missions from './components/missions/Mission';
 import Rockets from './components/rockets/Rocket';
 import Logo from './planet.png';
 import MyProfile from './components/MyProfile';
+import { fetchGetRockets } from './components/rocketSlice/rocketSlice';
 
 function App() {
   const colorActiveRoute = ({ isActive }) => (isActive ? { textDecoration: 'underline' } : { textDecoration: 'none' });
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchGetRockets());
+  }, [dispatch]);
 
   return (
     <div className="App">
@@ -22,12 +31,12 @@ function App() {
             <h1>Space Travelers &#39; Hub</h1>
           </div>
 
-          <navigator>
+          <div>
             <NavLink style={colorActiveRoute} to="/">Rockets</NavLink>
             <NavLink style={colorActiveRoute} to="/mission">Missions</NavLink>
             <NavLink style={colorActiveRoute} to="/myprofile">My Profile</NavLink>
 
-          </navigator>
+          </div>
         </header>
 
         <Routes>
