@@ -151,6 +151,12 @@ To run tests, run the following command:
 - Twitter: [@khanhror](https://twitter.com/home?lang=en)
 - LinkedIn: [Khanh RoR](https://www.linkedin.com/in/khanh-than-trong-3b4344246/)
 
+👤 Aqurds
+- GitHub: [@Aqurds](https://github.com/Aqurds)
+- Twitter: [@Aqurds](https://twitter.com/Aqurds)
+- LinkedIn: [omaraqurds](https://linkedin.com/in/omaraqurds)
+
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
