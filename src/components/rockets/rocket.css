@@ -1,5 +1,5 @@
 .rocket {
-  background-color: none;
+  background: none;
 }
 
 .rocket-ul {
@@ -27,7 +27,8 @@
   text-align: left;
 }
 
-.rocket-btn-type1, .rocket-btn-type2 {
+.rocket-btn-type1,
+.rocket-btn-type2 {
   width: 12rem;
   padding: 0.5rem;
   background: #007bff;
@@ -48,4 +49,3 @@
   box-shadow: none;
   translate: 0 0.1rem;
 }
-
