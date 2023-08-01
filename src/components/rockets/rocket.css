@@ -1,6 +1,51 @@
 .rocket {
-  border: 0.1rem solid;
-  width: 100%;
-  height: 10rem;
-  background-color: antiquewhite;
+  background: none;
+}
+
+.rocket-ul {
+  list-style: none;
+}
+
+.rocket-li {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.rocket-li-h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.rocket-li-imgs {
+  width: 18rem;
+}
+
+.rocket-li-name-desc {
+  text-align: left;
+}
+
+.rocket-btn-type1,
+.rocket-btn-type2 {
+  width: 12rem;
+  padding: 0.5rem;
+  background: #007bff;
+  border-radius: 0.5rem;
+  color: aliceblue;
+  border: none;
+  box-shadow: 0.1rem 0.1rem 0.1rem black;
+}
+
+.rocket-btn-type2 {
+  background: #fff;
+  border: 0.1rem solid #003c7d;
+  color: black;
+}
+
+.rocket-btn-type1:active,
+.rocket-btn-type2:active {
+  box-shadow: none;
+  translate: 0 0.1rem;
 }

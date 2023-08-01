@@ -36,9 +36,9 @@ const rocketSlice = createSlice({
         ...state,
         isLoading: false,
         rockets: payload.map(({
-          name, id, type, flickr_images: flickrImages,
+          id, name, type, flickr_images: flickrImages, description,
         }) => ({
-          id, name, type, flickrImages,
+          id, name, type, flickrImages, description,
         })),
       }))
       .addCase(fetchGetRockets.rejected, (state) => ({
@@ -48,6 +48,6 @@ const rocketSlice = createSlice({
   },
 });
 
-// export const {} = rocketSlice.actions;
+// export const {} = rocket`Slice.actions;
 
 export default rocketSlice.reducer;
