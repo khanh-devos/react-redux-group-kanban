@@ -17,7 +17,10 @@ export default function RocketItem({
       <img src={image} className="rocket-li-imgs" alt="rocket" />
       <div className="rocket-li-name-desc">
         <h3 className="rocket-li-h3">{name}</h3>
-        <p>{description}</p>
+        <p>
+          {reserved && <b className="rocket-li-reserved-tag">reserved</b>}
+          {description}
+        </p>
         <button
           type="button"
           className={!reserved ? 'rocket-btn-type1' : 'rocket-btn-type2'}
