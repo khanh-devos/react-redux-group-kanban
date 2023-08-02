@@ -1,6 +1,6 @@
 import { PropTypes } from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { joinMission, leaveMission } from '../../redux/missions/missionsSlice';
+import { toggleJoinMission } from '../../redux/missions/missionsSlice';
 
 export default function SingleMission({
   missionId, missionName, missionDescription, missionReserved,
@@ -8,11 +8,7 @@ export default function SingleMission({
   const dispatch = useDispatch();
   const handleJoinMission = (e) => {
     const missionId = e.target.id;
-    dispatch(joinMission(missionId));
-  };
-  const handleLeaveMission = (e) => {
-    const missionId = e.target.id;
-    dispatch(leaveMission(missionId));
+    dispatch(toggleJoinMission(missionId));
   };
   return (
     <tr>
@@ -23,20 +19,32 @@ export default function SingleMission({
         {missionDescription}
       </td>
       <td>
-        <button type="button">
-          Not a Member
-        </button>
+        { missionReserved && (
+          <button
+            type="button"
+            className="mission-active-button"
+          >
+            Active Member
+          </button>
+        )}
+        { !missionReserved && (
+          <button
+            type="button"
+            className="mission-inactive-button"
+          >
+            NOT A MEMBER
+          </button>
+        )}
       </td>
       <td>
         { missionReserved && (
           <button
             id={missionId}
             type="button"
-            onClick={handleLeaveMission}
+            onClick={handleJoinMission}
             className="leave-mission-button"
           >
             Leave Mission
-            {missionReserved}
           </button>
         )}
         { !missionReserved && (
@@ -47,7 +55,6 @@ export default function SingleMission({
             className="join-mission-button"
           >
             Join Mission
-            {missionReserved}
           </button>
         )}
       </td>

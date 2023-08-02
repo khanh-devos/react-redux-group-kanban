@@ -63,3 +63,16 @@
 .leave-mission-button:hover {
   background: darkred;
 }
+
+.mission-active-button,
+.mission-inactive-button {
+  background: darkslategray;
+  color: white;
+  border: none;
+  font-weight: 700;
+  padding: 15px !important;
+}
+
+.mission-inactive-button {
+  background: rgba(0, 0, 0, 0.5);
+}
