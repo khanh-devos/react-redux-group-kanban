@@ -30,6 +30,7 @@ export default function Missions() {
               missionId={singleMission.missionId}
               missionName={singleMission.missionName}
               missionDescription={singleMission.description}
+              missionReserved={singleMission.reserved || false}
             />
           ))}
         </tbody>
