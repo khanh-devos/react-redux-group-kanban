@@ -37,3 +37,29 @@
   width: 150px;
   padding: 5px 10px;
 }
+
+.join-mission-button {
+  background: darkcyan;
+  color: white;
+  border: none;
+  padding: 15px !important;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.join-mission-button:hover {
+  background: darkgreen;
+}
+
+.leave-mission-button {
+  background: tomato;
+  border: none;
+  color: white;
+  padding: 15px !important;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.leave-mission-button:hover {
+  background: darkred;
+}
