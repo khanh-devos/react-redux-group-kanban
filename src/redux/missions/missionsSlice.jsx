@@ -11,10 +11,11 @@ const initialState = {
 };
 
 export const fetchMissions = createAsyncThunk(
-  'mission/fetchMissions',
+  'missions/fetchMissions',
   async (name, thunkApi) => {
     try {
       const res = await axios.get(URL_MISSIONS);
+      console.log(res.data[0]);
       return res.data;
     } catch (err) {
       return thunkApi.rejectWithValue('all rockets not in the earth');
@@ -35,7 +36,11 @@ const missionsSlice = createSlice({
       .addCase(fetchMissions.fulfilled, (state, { payload }) => ({
         ...state,
         isLoading: false,
-        missions: payload,
+        missions: payload.map(({
+          mission_id: missionId, mission_name: missionName, description,
+        }) => ({
+          missionId, missionName, description,
+        })),
       }))
       .addCase(fetchMissions.rejected, (state) => ({
         ...state,
