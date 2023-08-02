@@ -1,0 +1,27 @@
+.my-profile {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+.profile-mission,
+.profile-rocket {
+  text-align: left;
+  width: 100%;
+}
+
+.profile-ul {
+  list-style-type: none;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 0;
+  margin-top: 10px;
+}
+
+.profile-ul li {
+  padding: 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.profile-ul li:last-child {
+  border-bottom: none;
+}
