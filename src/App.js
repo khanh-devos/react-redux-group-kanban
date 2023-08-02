@@ -9,8 +9,8 @@ import { useEffect } from 'react';
 import Missions from './components/missions/Mission';
 import Rockets from './components/rockets/Rocket';
 import Logo from './planet.png';
-import MyProfile from './components/MyProfile';
 import { fetchGetRockets } from './redux/rocketSlice/rocketSlice';
+import MyProfile from './components/myprofile/MyProfile';
 
 function App() {
   const { isLoading } = useSelector((store) => store.rocket);
