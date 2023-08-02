@@ -1,11 +1,15 @@
 import { PropTypes } from 'prop-types';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { toggleReserve } from '../../redux/rocketSlice/rocketSlice';
 
-export default function RocketItem({ image, name, description }) {
-  const [btn, setBtn] = useState(true);
+export default function RocketItem({
+  image, name, description, reserved, id,
+}) {
+  const dispatch = useDispatch();
   const handleClick = (event) => {
     event.preventDefault();
-    setBtn((btn) => !btn);
+    dispatch(toggleReserve(id));
   };
 
   return (
@@ -16,10 +20,10 @@ export default function RocketItem({ image, name, description }) {
         <p>{description}</p>
         <button
           type="button"
-          className={btn ? 'rocket-btn-type1' : 'rocket-btn-type2'}
+          className={!reserved ? 'rocket-btn-type1' : 'rocket-btn-type2'}
           onClick={handleClick}
         >
-          {btn ? 'Reserve Rocket' : 'Cancel Revervation' }
+          {reserved ? 'Reserve Rocket' : 'Cancel Revervation' }
         </button>
       </div>
     </li>
@@ -30,4 +34,6 @@ RocketItem.propTypes = {
   image: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
+  reserved: PropTypes.bool.isRequired,
+  id: PropTypes.string.isRequired,
 };

@@ -41,3 +41,8 @@ body {
 .logo-img {
   width: 3rem;
 }
+
+.isLoading {
+  font-size: 2rem;
+  margin-top: 30%;
+}
