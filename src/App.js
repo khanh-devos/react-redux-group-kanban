@@ -4,15 +4,16 @@ import './components/rockets/rocket.css';
 import {
   BrowserRouter, Route, NavLink, Routes,
 } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import Missions from './components/missions/Mission';
 import Rockets from './components/rockets/Rocket';
 import Logo from './planet.png';
 import MyProfile from './components/MyProfile';
-import { fetchGetRockets } from './components/rocketSlice/rocketSlice';
+import { fetchGetRockets } from './redux/rocketSlice/rocketSlice';
 
 function App() {
+  const { isLoading } = useSelector((store) => store.rocket);
   const colorActiveRoute = ({ isActive }) => (isActive ? { textDecoration: 'underline' } : { textDecoration: 'none' });
 
   const dispatch = useDispatch();
@@ -20,6 +21,8 @@ function App() {
   useEffect(() => {
     dispatch(fetchGetRockets());
   }, [dispatch]);
+
+  if (isLoading) return (<div className="isLoading">Loading ...</div>);
 
   return (
     <div className="App">

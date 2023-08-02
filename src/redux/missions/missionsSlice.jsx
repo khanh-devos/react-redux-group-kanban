@@ -15,7 +15,7 @@ export const fetchMissions = createAsyncThunk(
   async (name, thunkApi) => {
     try {
       const res = await axios.get(URL_MISSIONS);
-      console.log(res.data[0]);
+      // console.log(res.data[0]);
       return res.data;
     } catch (err) {
       return thunkApi.rejectWithValue('all rockets not in the earth');
