@@ -15,11 +15,23 @@ export const fetchMissions = createAsyncThunk(
   async (name, thunkApi) => {
     try {
       const res = await axios.get(URL_MISSIONS);
-      console.log(res.data[0]);
       return res.data;
     } catch (err) {
-      return thunkApi.rejectWithValue('all rockets not in the earth');
+      return thunkApi.rejectWithValue('all missions are completed!');
     }
+  },
+);
+
+const joinMission = createAsyncThunk('missions/joinMission', async (missionId, API) => {
+  const mId = missionId;
+  return mId;
+});
+
+const leaveMission = createAsyncThunk(
+  'missions/leaveMission',
+  async (missionId, API) => {
+    const mId = missionId;
+    return mId;
   },
 );
 
@@ -29,6 +41,22 @@ const missionsSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder
+      .addCase(joinMission.fulfilled, (state, action) => {
+        state.isLoading = false;
+        const newState = state.missions.map((mission) => {
+          if (mission.missionId !== action.payload) return mission;
+          return { ...mission, reserved: true };
+        });
+        state.missions = newState;
+      })
+      .addCase(leaveMission.fulfilled, (state, action) => {
+        state.isLoading = false;
+        const newState = state.missions.map((mission) => {
+          if (mission.missionId !== action.payload) return mission;
+          return { ...mission, reserved: false };
+        });
+        state.missions = newState;
+      })
       .addCase(fetchMissions.pending, (state) => ({
         ...state,
         isLoading: true,
@@ -48,5 +76,7 @@ const missionsSlice = createSlice({
       }));
   },
 });
+
+export { joinMission, leaveMission };
 
 export default missionsSlice.reducer;
