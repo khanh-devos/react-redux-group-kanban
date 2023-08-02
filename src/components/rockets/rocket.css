@@ -19,6 +19,13 @@
   margin-bottom: 1rem;
 }
 
+.rocket-li-reserved-tag {
+  background: #83bfff;
+  font-weight: bold;
+  padding: 0 0.3rem;
+  outline: auto rgb(129, 129, 255);
+}
+
 .rocket-li-imgs {
   width: 18rem;
 }
