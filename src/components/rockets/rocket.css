@@ -50,6 +50,10 @@
   translate: 0 0.1rem;
 }
 
+.my-profile {
+  margin-top: 1rem;
+}
+
 .my-profile-booked-h3 {
   font-size: 1.2rem;
   text-align: left;
