@@ -49,3 +49,15 @@
   box-shadow: none;
   translate: 0 0.1rem;
 }
+
+.my-profile-booked-h3 {
+  font-size: 1.2rem;
+  text-align: left;
+}
+
+.rocket-profile-ul {
+  text-align: left;
+  list-style: inside;
+  margin-top: 1rem;
+  font-size: 1.2rem;
+}
