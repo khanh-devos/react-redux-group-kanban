@@ -1,8 +1,7 @@
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-const { createSlice, createAsyncThunk } = require('@reduxjs/toolkit');
-
-const URL_ROCKET = 'https://api.spacexdata.com/v4/rockets';
+export const URL_ROCKET = 'https://api.spacexdata.com/v4/rockets';
 
 const initialState = {
   isLoading: true,
@@ -47,9 +46,9 @@ const rocketSlice = createSlice({
         ...state,
         isLoading: false,
         rockets: payload.map(({
-          id, name, type, flickr_images: flickrImages, description,
+          id, name, flickr_images: flickrImages, description,
         }) => ({
-          id, name, type, flickrImages, description,
+          id, name, flickrImages, description,
         })),
       }))
       .addCase(fetchGetRockets.rejected, (state) => ({

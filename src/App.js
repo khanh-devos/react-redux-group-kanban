@@ -11,6 +11,7 @@ import Rockets from './components/rockets/Rocket';
 import Logo from './planet.png';
 import { fetchGetRockets } from './redux/rocketSlice/rocketSlice';
 import MyProfile from './components/myprofile/MyProfile';
+import { fetchMissions } from './redux/missions/missionsSlice';
 
 function App() {
   const { isLoading } = useSelector((store) => store.rocket);
@@ -20,6 +21,7 @@ function App() {
 
   useEffect(() => {
     dispatch(fetchGetRockets());
+    dispatch(fetchMissions());
   }, [dispatch]);
 
   if (isLoading) return (<div className="isLoading">Loading ...</div>);

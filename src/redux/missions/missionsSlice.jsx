@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const { createSlice, createAsyncThunk } = require('@reduxjs/toolkit');
 
-const URL_MISSIONS = 'https://api.spacexdata.com/v3/missions';
+export const URL_MISSIONS = 'https://api.spacexdata.com/v3/missions';
 
 const initialState = {
   isLoading: true,

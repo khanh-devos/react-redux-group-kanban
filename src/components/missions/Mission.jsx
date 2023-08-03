@@ -1,16 +1,9 @@
-import { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import './mission.css';
-import { fetchMissions } from '../../redux/missions/missionsSlice';
-import SingleMission from './singleMission';
+import SingleMission from './SingleMission';
 
 export default function Missions() {
   const missions = useSelector((state) => state.mission.missions);
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(fetchMissions());
-  }, [dispatch]);
 
   return (
     <div className="mission-wrapper">

@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test Profile should match MyProfile snapshot 1`] = `
+<div>
+  <div
+    class="my-profile"
+  >
+    <div
+      class="profile-mission"
+    >
+      <h3
+        class="my-profile-booked-h3"
+      >
+        My Missions
+      </h3>
+      <ul
+        class="profile-ul"
+      />
+    </div>
+    <div
+      class="profile-rocket"
+    >
+      <h3
+        class="my-profile-booked-h3"
+      >
+        My Rockets
+      </h3>
+      <ul
+        class="profile-ul"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`test Profile should match ProfileItem snapshot 1`] = `
+<div>
+  <li
+    class="reserved-rockets"
+  >
+    test
+  </li>
+</div>
+`;

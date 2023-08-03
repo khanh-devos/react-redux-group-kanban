@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test Single Mission should match Single Mission 1`] = `
+<div>
+  <tr>
+    <td>
+      name
+    </td>
+    <td>
+      desc
+    </td>
+    <td>
+      <button
+        class="mission-inactive-button"
+        type="button"
+      >
+        NOT A MEMBER
+      </button>
+    </td>
+    <td>
+      <button
+        class="join-mission-button"
+        id="1111"
+        type="button"
+      >
+        Join Mission
+      </button>
+    </td>
+  </tr>
+</div>
+`;
