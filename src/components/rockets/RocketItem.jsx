@@ -1,5 +1,4 @@
 import { PropTypes } from 'prop-types';
-import { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { toggleReserve } from '../../redux/rocketSlice/rocketSlice';
 
@@ -23,6 +22,7 @@ export default function RocketItem({
         </p>
         <button
           type="button"
+          title="testClick"
           className={!reserved ? 'rocket-btn-type1' : 'rocket-btn-type2'}
           onClick={handleClick}
         >

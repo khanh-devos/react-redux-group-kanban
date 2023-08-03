@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test components should match Mission 1`] = `
+<div>
+  <div
+    class="mission-wrapper"
+  >
+    <table
+      class="mission-table"
+    >
+      <thead>
+        <tr>
+          <th>
+            Mission
+          </th>
+          <th>
+            Description
+          </th>
+          <th>
+            Status
+          </th>
+          <th>
+            Action
+          </th>
+        </tr>
+      </thead>
+      <tbody />
+    </table>
+  </div>
+</div>
+`;
+
+exports[`test components should match Rocket 1`] = `
+<div>
+  <li
+    class="rocket-li"
+  >
+    <img
+      alt="rocket"
+      class="rocket-li-imgs"
+      src="http"
+    />
+    <div
+      class="rocket-li-name-desc"
+    >
+      <h3
+        class="rocket-li-h3"
+      >
+        rocket 1
+      </h3>
+      <p>
+        desc
+      </p>
+      <button
+        class="rocket-btn-type1"
+        title="testClick"
+        type="button"
+      >
+        Reserve Rocket
+      </button>
+    </div>
+  </li>
+</div>
+`;
+
+exports[`test components should match the snapshot 1`] = `<div />`;
