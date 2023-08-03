@@ -23,6 +23,7 @@ exports[`test Single Mission should match Single Mission 1`] = `
           <button
             class="join-mission-button"
             id="111"
+            title="test-mission-btn"
             type="button"
           >
             Join Mission
