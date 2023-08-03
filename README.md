@@ -29,7 +29,7 @@
 
 # 📖 [React-redux-group] <a name="about-project"></a>
 
-**React-redux-group** works the real live data from the SpaceX API. It provides commercial and scientific space travel services, allows users to book|cancel rockets and join selected space missions. Kanban board is used for workload management.
+**React-redux-group** works the real live data from the SpaceX API. It provides commercial and scientific space travel services, allows users to book|cancel rockets and join selected space missions. Kanban board is used for workload management. Testing is included.
 
 ## 🛠 Built With <a name="built-with"></a>
 
