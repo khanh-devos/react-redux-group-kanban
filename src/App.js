@@ -34,7 +34,9 @@ function App() {
       <BrowserRouter>
         <header className="header">
           <div className="logo-container">
-            <img className="logo-img" src={Logo} alt="space logo" />
+            <NavLink style={colorActiveRoute} to="/react-redux-group-kanban">
+              <img className="logo-img" src={Logo} alt="space logo" />
+            </NavLink>
             <h1>Space Travelers &#39; Hub</h1>
           </div>
 
