@@ -7,7 +7,11 @@ describe('test Single Mission', () => {
   it('should match Single Mission', () => {
     const { container } = render(
       <Provider store={store}>
-        <SingleMission missionId="111" missionName="name" missionDescription="desc" missionReserved={false} />
+        <table>
+          <thead>
+            <SingleMission missionId="111" missionName="name" missionDescription="desc" missionReserved={false} />
+          </thead>
+        </table>
       </Provider>,
     );
 

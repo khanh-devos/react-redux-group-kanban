@@ -38,7 +38,7 @@ exports[`test components should match Rocket 1`] = `
     <img
       alt="rocket"
       class="rocket-li-imgs"
-      src="http1"
+      src="http"
     />
     <div
       class="rocket-li-name-desc"
@@ -49,7 +49,7 @@ exports[`test components should match Rocket 1`] = `
         rocket 1
       </h3>
       <p>
-        desc1
+        desc
       </p>
       <button
         class="rocket-btn-type1"
