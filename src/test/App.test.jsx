@@ -98,6 +98,7 @@ describe('test components', () => {
     }));
     expect(btn).toBeTruthy;
     fireEvent.click(btn);
+    expect(btn.textContent).toContain('Join');
     
   });
 });

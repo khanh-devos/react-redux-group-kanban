@@ -3,12 +3,6 @@ import axios from 'axios';
 import { act } from 'react-dom/test-utils';
 import { Provider } from 'react-redux';
 import App from '../App';
-import Missions from '../components/missions/Mission';
-import RocketItem from '../components/rockets/RocketItem';
-import { URL_MISSIONS } from '../redux/missions/missionsSlice';
-import { URL_ROCKET } from '../redux/rocketSlice/rocketSlice';
-import store from '../store';
-import { useAppDispatch } from './mock';
 
 jest.mock('axios');
 jest.mock('./mock');
