@@ -1,0 +1,78 @@
+.mission-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+}
+
+.mission-table {
+  text-align: left;
+}
+
+.mission-table thead tr th {
+  border: 1px solid lightgray;
+  padding: 20px 10px;
+}
+
+.mission-table tbody tr td {
+  border-right: 1px solid rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 10px;
+  margin: 0;
+}
+
+.mission-table tbody tr:first-child td {
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.mission-table tbody tr td:first-child {
+  border-left: 1px solid rgba(0, 0, 0, 0.05);
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.mission-table tbody tr:nth-child(odd) td {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.mission-table button {
+  width: 150px;
+  padding: 5px 10px;
+}
+
+.join-mission-button {
+  background: darkcyan;
+  color: white;
+  border: none;
+  padding: 15px !important;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.join-mission-button:hover {
+  background: darkgreen;
+}
+
+.leave-mission-button {
+  background: tomato;
+  border: none;
+  color: white;
+  padding: 15px !important;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.leave-mission-button:hover {
+  background: darkred;
+}
+
+.mission-active-button,
+.mission-inactive-button {
+  background: darkslategray;
+  color: white;
+  border: none;
+  font-weight: 700;
+  padding: 15px !important;
+}
+
+.mission-inactive-button {
+  background: rgba(0, 0, 0, 0.5);
+}

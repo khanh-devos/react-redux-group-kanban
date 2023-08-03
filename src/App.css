@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+
+* {
+  box-sizing: border-box;
+  font-family: Roboto, fantasy;
+  font-size: 14px;
+  padding: 0;
+  margin: 0.2rem;
+}
+
+:root {
+  --bodyPadding: 15rem;
+
+  @media screen and (max-width: 765px) {
+    --bodyPadding: 1rem;
+  }
+}
+
+body {
+  text-align: center;
+}
+
+.App {
+  padding: 10px 50px;
+}
+
+.header {
+  justify-content: space-between;
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo-img {
+  width: 3rem;
+}
+
+.isLoading {
+  font-size: 2rem;
+  margin-top: 30%;
+}
