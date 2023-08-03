@@ -41,18 +41,17 @@ function App() {
           </div>
 
           <div>
-            <NavLink style={colorActiveRoute} to="/">Rockets</NavLink>
-            <NavLink style={colorActiveRoute} to="/mission">Missions</NavLink>
-            <NavLink style={colorActiveRoute} to="/myprofile">My Profile</NavLink>
+            <NavLink style={colorActiveRoute} to="/react-redux-group-kanban">Rockets</NavLink>
+            <NavLink style={colorActiveRoute} to="/react-redux-group-kanban/mission">Missions</NavLink>
+            <NavLink style={colorActiveRoute} to="/react-redux-group-kanban/myprofile">My Profile</NavLink>
 
           </div>
         </header>
 
         <Routes>
           <Route path="/react-redux-group-kanban" element={<Rockets />} />
-          <Route path="/" element={<Rockets />} />
-          <Route path="/mission" element={<Missions />} />
-          <Route path="/myprofile" element={<MyProfile />} />
+          <Route path="/react-redux-group-kanban/mission" element={<Missions />} />
+          <Route path="/react-redux-group-kanban/myprofile" element={<MyProfile />} />
         </Routes>
       </BrowserRouter>
     </div>
