@@ -4,7 +4,6 @@ import { act } from 'react-dom/test-utils';
 import { Provider } from 'react-redux';
 import App from '../App';
 import Missions from '../components/missions/Mission';
-import SingleMission from '../components/missions/SingleMission';
 import RocketItem from '../components/rockets/RocketItem';
 import { URL_MISSIONS } from '../redux/missions/missionsSlice';
 import { URL_ROCKET } from '../redux/rocketSlice/rocketSlice';
