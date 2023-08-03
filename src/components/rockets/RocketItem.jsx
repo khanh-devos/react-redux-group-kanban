@@ -22,7 +22,7 @@ export default function RocketItem({
         </p>
         <button
           type="button"
-          title='testClick'
+          title="testClick"
           className={!reserved ? 'rocket-btn-type1' : 'rocket-btn-type2'}
           onClick={handleClick}
         >

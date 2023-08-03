@@ -49,38 +49,22 @@ describe('test components', () => {
     });
   });
 
-  
   it('should match Rocket', () => {
-    const data = {
-      image: 'http1', 
-      name: 'rocket 1', 
-      description: 'desc1', 
-      reserved: false, 
-      id: '111',
-    }
-
-    
     const { container } = render(
       <Provider store={store}>
-        <RocketItem {...data} />
-      </Provider>
+        <RocketItem name="rocket 1" id="111" description="desc" reserved={false} image="http" />
+      </Provider>,
     );
     expect(container).toMatchSnapshot();
-    
-  })
+  });
 
   it('should match Mission', () => {
-     const { container } = render(
+    const { container } = render(
       <Provider store={store}>
         <Missions />
-      </Provider>
+      </Provider>,
     );
 
     expect(container).toMatchSnapshot();
-  })
-
-  
+  });
 });
-  
-
-
