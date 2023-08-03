@@ -13,8 +13,6 @@ import { fetchGetRockets } from './redux/rocketSlice/rocketSlice';
 import MyProfile from './components/myprofile/MyProfile';
 import { fetchMissions } from './redux/missions/missionsSlice';
 
-const APP_NAME = 'react-redux-group-kanban';
-
 function App() {
   const { isLoading } = useSelector((store) => store.rocket);
   const colorActiveRoute = ({ isActive }) => (isActive ? { textDecoration: 'underline' } : { textDecoration: 'none' });
@@ -34,7 +32,7 @@ function App() {
       <BrowserRouter>
         <header className="header">
           <div className="logo-container">
-            <NavLink style={colorActiveRoute} to="/react-redux-group-kanban">
+            <NavLink style={colorActiveRoute} to="/">
               <img className="logo-img" src={Logo} alt="space logo" />
             </NavLink>
             <h1>Space Travelers &#39; Hub</h1>
@@ -49,7 +47,6 @@ function App() {
         </header>
 
         <Routes>
-          <Route path="/react-redux-group-kanban" element={<Rockets />} />
           <Route path="/" element={<Rockets />} />
           <Route path="/mission" element={<Missions />} />
           <Route path="/myprofile" element={<MyProfile />} />
