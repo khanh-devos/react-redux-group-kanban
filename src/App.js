@@ -45,10 +45,11 @@ function App() {
         </header>
 
         <Routes>
-          <Route path="/" element={<Rockets />} />
-          <Route path="/mission" element={<Missions />} />
-          <Route path="/myprofile" element={<MyProfile />} />
-
+          <Route element={<Rockets />}>
+            <Route path="/" element={<Rockets />} />
+            <Route path="/mission" element={<Missions />} />
+            <Route path="/myprofile" element={<MyProfile />} />
+          </Route>
         </Routes>
       </BrowserRouter>
     </div>
