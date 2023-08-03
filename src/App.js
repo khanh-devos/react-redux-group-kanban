@@ -2,7 +2,7 @@ import './App.css';
 import './components/missions/mission.css';
 import './components/rockets/rocket.css';
 import {
-  BrowserRouter, Route, NavLink, Routes,
+  BrowserRouter, Route, NavLink, Routes, redirect,
 } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
@@ -12,6 +12,8 @@ import Logo from './planet.png';
 import { fetchGetRockets } from './redux/rocketSlice/rocketSlice';
 import MyProfile from './components/myprofile/MyProfile';
 import { fetchMissions } from './redux/missions/missionsSlice';
+
+const APP_NAME = 'react-redux-group-kanban';
 
 function App() {
   const { isLoading } = useSelector((store) => store.rocket);
@@ -45,10 +47,10 @@ function App() {
         </header>
 
         <Routes>
+          <Route path="/react-redux-group-kanban" element={<Rockets />} />
           <Route path="/" element={<Rockets />} />
           <Route path="/mission" element={<Missions />} />
           <Route path="/myprofile" element={<MyProfile />} />
-
         </Routes>
       </BrowserRouter>
     </div>
