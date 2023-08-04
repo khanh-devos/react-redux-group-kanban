@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/react-redux-group-kanban/static/css/main.458e7955.css",
-    "main.js": "/react-redux-group-kanban/static/js/main.c89b700e.js",
+    "main.js": "/react-redux-group-kanban/static/js/main.4144f980.js",
     "static/js/787.52950dca.chunk.js": "/react-redux-group-kanban/static/js/787.52950dca.chunk.js",
     "static/media/planet.png": "/react-redux-group-kanban/static/media/planet.27109cd3d329612a6ec3.png",
     "index.html": "/react-redux-group-kanban/index.html",
     "main.458e7955.css.map": "/react-redux-group-kanban/static/css/main.458e7955.css.map",
-    "main.c89b700e.js.map": "/react-redux-group-kanban/static/js/main.c89b700e.js.map",
+    "main.4144f980.js.map": "/react-redux-group-kanban/static/js/main.4144f980.js.map",
     "787.52950dca.chunk.js.map": "/react-redux-group-kanban/static/js/787.52950dca.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.458e7955.css",
-    "static/js/main.c89b700e.js"
+    "static/js/main.4144f980.js"
   ]
 }
