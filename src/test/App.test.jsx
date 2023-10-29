@@ -39,11 +39,11 @@ describe('test components', () => {
           return Promise.reject(new Error('not found'));
       }
     });
-  })
+  });
 
   afterEach(() => {
     jest.clearAllMocks();
-  })
+  });
 
   it('should match the snapshot', async () => {
     await act(async () => {
@@ -57,20 +57,18 @@ describe('test components', () => {
   });
 
   it('should match Rocket Item', () => {
-    
     const { queryByTitle } = render(
       <Provider store={store}>
         <RocketItem name="rocket 1" id="111" description="desc1" reserved={false} image="http1" />
       </Provider>,
     );
-    
+
     useAppDispatch.mockImplementation(() => ({
-      payload: '111'
+      payload: '111',
     }));
 
     const btn = queryByTitle('testClick');
     fireEvent.click(btn);
-    
   });
 
   it('should match Mission', () => {
@@ -84,21 +82,20 @@ describe('test components', () => {
   });
 
   it('should match Single Mission', () => {
-    
     const { queryByTitle } = render(
       <Provider store={store}>
         <SingleMission missionId="111" missionName="mission 1" missionDescription="desc1" missionReserved={false} />
       </Provider>,
     );
-    
+
     const btn = queryByTitle('test-mission-btn');
-    
+
     useAppDispatch.mockImplementation(() => ({
-      payload: '111'
+      payload: '111',
     }));
-    expect(btn).toBeTruthy;
+
+    // expect(btn).toBeTruthy;
     fireEvent.click(btn);
     expect(btn.textContent).toContain('Join');
-    
   });
 });
