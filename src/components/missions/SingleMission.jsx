@@ -51,6 +51,7 @@ export default function SingleMission({
           <button
             id={missionId}
             type="button"
+            title="test-mission-btn"
             onClick={handleJoinMission}
             className="join-mission-button"
           >
