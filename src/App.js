@@ -29,7 +29,7 @@ function App() {
   return (
     <div className="App">
 
-      <BrowserRouter>
+      <BrowserRouter basename="react-redux-group-kanban">
         <header className="header">
           <div className="logo-container">
             <img className="logo-img" src={Logo} alt="space logo" />
